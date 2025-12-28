@@ -90,10 +90,10 @@ gunzip cc.ar.300.bin.gz
 Run the notebooks in order:
 ```bash
 Ar_En_classical_model_RF.ipynb       # Train Random Forests
-MarBERT.ipynb         # Train Arabic specialist
-DeBERTa.ipynb        # Train English specialist
-XLM-RoBERTa.ipynb      # Train multilingual model
-Ensemble and inference.ipynb     # Run ensemble voting
+MarBERT.ipynb                        # Train Arabic specialist
+DeBERTa.ipynb                        # Train English specialist
+XLM-RoBERTa.ipynb                    # Train multilingual model
+Ensemble and inference.ipynb         # Run ensemble voting
 ```
 
 **⭐ Star this repo if you find it helpful!**
