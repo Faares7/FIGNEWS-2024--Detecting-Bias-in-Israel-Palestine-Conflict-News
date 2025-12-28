@@ -89,75 +89,11 @@ gunzip cc.ar.300.bin.gz
 
 Run the notebooks in order:
 ```bash
-01_Classical_Models.ipynb       # Train Random Forests
-02_MARBERT_Arabic.ipynb         # Train Arabic specialist
-03_DeBERTa_English.ipynb        # Train English specialist
-04_XLMR_Multilingual.ipynb      # Train multilingual model
-05_Inference_Ensemble.ipynb     # Run ensemble voting
+Ar_En_classical_model_RF.ipynb       # Train Random Forests
+MarBERT.ipynb         # Train Arabic specialist
+DeBERTa.ipynb        # Train English specialist
+XLM-RoBERTa.ipynb      # Train multilingual model
+Ensemble and inference.ipynb     # Run ensemble voting
 ```
-
-### Predict Bias for a Single Article
-```python
-from src.ensemble import BiasDetectionEnsemble
-
-# Load models
-ensemble = BiasDetectionEnsemble(models_dir="models/")
-
-# Predict
-article = "Your news article text here..."
-result = ensemble.predict(article)
-
-print(f"Bias: {result['label']}")
-print(f"Confidence: {result['confidence']}")
-```
-
----
-
-## 📁 Project Structure
-```
-fignews-2024/
-├── data/                    # Dataset files
-├── models/                  # Saved trained models
-├── notebooks/               # 5 training notebooks (01-05)
-├── src/                     # Python code (preprocessing, models, ensemble)
-├── results/                 # Performance reports
-└── requirements.txt         # Dependencies
-```
-
----
-
-## 📦 Requirements
-
-- Python 3.8+
-- PyTorch
-- Transformers (Hugging Face)
-- Scikit-learn
-- FastText
-- Pandas, NumPy
-
----
-
-## 🎓 Key Takeaways
-
-✅ **Language-specific experts** work better than one multilingual model  
-✅ **Simple AI (Random Forest)** beat advanced transformers with limited data  
-✅ **Voting helps** - models correct each other's mistakes  
-✅ **Feature engineering matters** - telling AI what to look for helps  
-
----
-
-## 📧 Contact
-
-**Your Name**  
-Email: your.email@example.com  
-GitHub: [github.com/yourusername](https://github.com/yourusername)
-
----
-
-## 📄 License
-
-MIT License - see LICENSE file for details.
-
----
 
 **⭐ Star this repo if you find it helpful!**
